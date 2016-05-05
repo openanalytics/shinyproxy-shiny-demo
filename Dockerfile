@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
     libssl1.0.0
 
 # packages needed for basic shiny functionality
-RUN R -e "install.packages(c('shiny', 'rmarkdown', repos='https://cloud.r-project.org'))"
+RUN R -e "install.packages(c('shiny', 'rmarkdown'), repos='https://cloud.r-project.org')"
 
 # set host and port
 COPY Rprofile.site /usr/lib/R/etc/
