@@ -1,0 +1,12 @@
+Package: shinyproxy
+Maintainer: Tobias Verbeke <tobias.verbeke@openanalytics.eu>
+License: GPL-3 + file LICENSE
+Title: Demo Application to Demonstrate Shiny Proxy
+Type: Package
+Author: Tobias Verbeke
+Description: Demo Package to Demonstrate Shiny Proxy
+Version: 0.0.1
+Date: 2016-05-05
+Imports:
+    shiny
+RoxygenNote: 5.0.1

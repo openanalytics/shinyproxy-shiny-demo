@@ -1,2 +1,4 @@
 /.settings/
 /.project
+/shinyproxy_*.tar.gz
+/shinyproxy.Rcheck
