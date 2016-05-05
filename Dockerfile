@@ -17,10 +17,9 @@ RUN apt-get update && apt-get install -y \
 RUN R -e "install.packages(c('shiny', 'rmarkdown'), repos='https://cloud.r-project.org')"
 
 # install shinyproxy package with demo shiny application
-COPY shinyproxy /root/
-RUN R CMD build /root/shinyproxy
-RUN R CMD INSTALL /root/shinyproxy_*.tar.gz
-RUN rm -fR /root/shinyproxy 
+COPY shinyproxy_0.0.1.tar.gz /root/
+RUN R CMD INSTALL /root/shinyproxy_0.0.1.tar.gz
+RUN rm /root/shinyproxy_0.0.1.tar.gz
 
 # set host and port
 COPY Rprofile.site /usr/lib/R/etc/
