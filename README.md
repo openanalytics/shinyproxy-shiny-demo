@@ -1,4 +1,4 @@
 
 ```
-sudo docker build -t openanalytics/r-shiny .
+sudo docker build -t openanalytics/shinyproxy-demo .
 ```
