@@ -26,4 +26,4 @@ COPY Rprofile.site /usr/lib/R/etc/
 
 EXPOSE 3838
 
-CMD ["R", "-e shinyproxy::run_01_hello()"]
+CMD ["R", "-e", "shinyproxy::run_01_hello()"]
