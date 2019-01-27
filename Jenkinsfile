@@ -3,7 +3,7 @@ pipeline {
     agent any
     
     parameters {
-        booleanParam(name: 'NOCACHE', defaultValue: true, description: 'Run docker build with --no-cache')
+        booleanParam(name: 'NOCACHE', defaultValue: false, description: 'Run docker build with --no-cache')
         string(name: 'NOTIFY_CHANNEL', defaultValue: '#jenkinstest', description: 'Rocket.Chat channel(s) to notify (comma-separated)')
     }
 
