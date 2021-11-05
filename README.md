@@ -1,6 +1,6 @@
 # Running Shiny apps in ShinyProxy
 
-This repository explains how to run a Shiny app in ShinyProxy. 
+This repository explains how to run a Shiny app in ShinyProxy.
 
 ## Building the Docker image
 
@@ -35,4 +35,4 @@ specs:
   container-image: openanalytics/shinyproxy-demo
 ```
 
-**(c) Copyright Open Analytics NV, 2021.**
+**(c) Copyright Open Analytics NV, 2016-2021.**
