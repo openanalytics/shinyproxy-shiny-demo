@@ -1,28 +1,28 @@
-FROM openanalytics/r-base
+FROM openanalytics/r-ver:4.1.3
 
-MAINTAINER Tobias Verbeke "tobias.verbeke@openanalytics.eu"
+LABEL maintainer="Tobias Verbeke <tobias.verbeke@openanalytics.eu>"
 
-RUN apt-get update && apt-get install -y \
-    sudo \
+RUN apt-get update && apt-get install --no-install-recommends -y \
     pandoc \
     pandoc-citeproc \
     libcurl4-gnutls-dev \
     libcairo2-dev \
     libxt-dev \
     libssl-dev \
-    libssh2-1-dev
+    libssh2-1-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 # packages needed for basic shiny functionality
-RUN R -e "install.packages(c('shiny', 'rmarkdown'), repos='https://cloud.r-project.org')"
+RUN R -q -e "install.packages(c('shiny', 'rmarkdown'))"
 
 # install shinyproxy package with demo shiny application
 COPY shinyproxy_0.0.1.tar.gz /root/
-RUN R CMD INSTALL /root/shinyproxy_0.0.1.tar.gz
+RUN R -q CMD INSTALL /root/shinyproxy_0.0.1.tar.gz
 RUN rm /root/shinyproxy_0.0.1.tar.gz
 
 # set host and port
-COPY Rprofile.site /usr/lib/R/etc/
+COPY Rprofile.site /usr/local/lib/R/etc/
 
 EXPOSE 3838
 
-CMD ["R", "-e", "shinyproxy::run_01_hello()"]
+CMD ["R", "-q", "-e", "shinyproxy::run_01_hello()"]

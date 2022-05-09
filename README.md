@@ -35,4 +35,4 @@ specs:
   container-image: openanalytics/shinyproxy-demo
 ```
 
-**(c) Copyright Open Analytics NV, 2016-2021.**
+**(c) Copyright Open Analytics NV, 2016-2022.**
