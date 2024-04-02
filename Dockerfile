@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     && rm -rf /var/lib/apt/lists/*
 
 # system library dependency for the euler app
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install --no-install-recommends -y \
     libmpfr-dev \
     && rm -rf /var/lib/apt/lists/*
 
