@@ -4,11 +4,9 @@
 \alias{runShiny}
 \title{Run the shiny application}
 \usage{
-runShiny(doDebug = FALSE, ...)
+runShiny(...)
 }
 \arguments{
-\item{doDebug}{boolean, whether to show debug options in the UI; default FALSE}
-
 \item{...}{further arguments that can be passed to \code{\link[shiny]{shinyApp}} options}
 }
 \value{
