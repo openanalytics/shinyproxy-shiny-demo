@@ -7,7 +7,7 @@
 serverFunction()
 }
 \value{
-no return value
+function that can be used as server component of a shiny app
 }
 \description{
 Main server function (like in server.R)

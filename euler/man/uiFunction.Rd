@@ -4,10 +4,7 @@
 \alias{uiFunction}
 \title{Main UI function (like in ui.R)}
 \usage{
-uiFunction(doDebug)
-}
-\arguments{
-\item{doDebug}{boolean, whether to show extra debug options in the UI}
+uiFunction()
 }
 \value{
 UI object

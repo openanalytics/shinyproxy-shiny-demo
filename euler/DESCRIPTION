@@ -1,15 +1,15 @@
 Package: euler
 Type: Package
-Title: More About What It Does (one line, title case)
+Title: Application to calculate Euler's e with the given precision
 Version: 0.0.1
 Date: 2024-04-02
 Author: Who wrote it
-Maintainer: Who wrote it <info@openanalytics.eu>
-Description: More about what it does (maybe more than one line).
+Maintainer: Open Analytics <info@openanalytics.eu>
+Description: Application to calculate Euler's e with the given precision.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Imports: 
-	shiny
+	Rmpfr, shiny
 Suggests: 
 	testthat
 RoxygenNote: 7.3.1

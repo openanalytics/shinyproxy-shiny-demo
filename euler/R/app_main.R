@@ -1,5 +1,5 @@
 #' Main server function (like in server.R)
-#' @return no return value
+#' @return function that can be used as server component of a shiny app 
 #' 
 #' @import shiny
 #' @import Rmpfr
@@ -13,10 +13,7 @@ serverFunction <- function() {
       precisionBits <- input$precision
       one <- mpfr(1, precBits = precisionBits)
       e <- exp(one)
-      # TODO fix printing...
-      x <- capture.output(print(e, ndigits = precisionBits))[2]
-      gsub("^\\[1\\] (.+)$", "\\1", x)
-
+      formatMpfr(e)
 
     })
 
@@ -26,12 +23,11 @@ serverFunction <- function() {
 
 
 #' Main UI function (like in ui.R)
-#' @param doDebug boolean, whether to show extra debug options in the UI
 #' @return UI object 
 #' 
 #' @import shiny
 #' @export
-uiFunction <- function(doDebug) {
+uiFunction <- function() {
 
   function(request) {
 
