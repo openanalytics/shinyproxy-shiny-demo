@@ -3,7 +3,14 @@
 This repository explains how to run a Shiny app in ShinyProxy. The R code in
 this repository is bundled into an [R package](https://r-pkgs.org/).
 See [this demo](https://github.com/openanalytics/shinyproxy-demo-minimal) that
-uses the same code, but witout using an R package.
+uses the same code, but without using an R package.
+
+Related demos:
+
+- [plain Shiny demo (no R package)](https://github.com/openanalytics/shinyproxy-demo-minimal)
+- [Shiny demo using pak](https://github.com/openanalytics/shinyproxy-shiny-pak-demo)
+- [Shiny demo using r2u](https://github.com/openanalytics/shinyproxy-shiny-r2u-demo)
+- [Shiny demo using renv](https://github.com/openanalytics/shinyproxy-shiny-renv-demo)
 
 ## Building the Docker image
 
@@ -36,5 +43,10 @@ specs:
     description: Application to calculate euler
     container-image: openanalytics/shinyproxy-demo:euler
 ```
+
+# References
+
+- [ShinyProxy.io](https://shinyproxy.io/)
+- [All demos](https://shinyproxy.io/documentation/demos/)
 
 **(c) Copyright Open Analytics NV, 2016-2024.**
