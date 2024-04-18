@@ -2,12 +2,12 @@
 
 This repository explains how to run a Shiny app in ShinyProxy. The R code in
 this repository is bundled into an [R package](https://r-pkgs.org/).
-See [this demo](https://github.com/openanalytics/shinyproxy-demo-minimal) that
+See [this demo](https://github.com/openanalytics/shinyproxy-shiny-demo-minimal) that
 uses the same code, but without using an R package.
 
 Related demos:
 
-- [plain Shiny demo (no R package)](https://github.com/openanalytics/shinyproxy-demo-minimal)
+- [plain Shiny demo (no R package)](https://github.com/openanalytics/shinyproxy-shiny-demo-minimal)
 - [Shiny demo using pak](https://github.com/openanalytics/shinyproxy-shiny-pak-demo)
 - [Shiny demo using r2u](https://github.com/openanalytics/shinyproxy-shiny-r2u-demo)
 - [Shiny demo using renv](https://github.com/openanalytics/shinyproxy-shiny-renv-demo)
@@ -17,7 +17,7 @@ Related demos:
 To pull the image made in this repository from Docker Hub, use
 
 ```bash
-sudo docker pull openanalytics/shinyproxy-demo:euler
+sudo docker pull openanalytics/shinyproxy-shiny-demo
 ```
 
 The relevant Docker Hub repository can be found at [https://hub.docker.com/r/openanalytics/shinyproxy-demo](https://hub.docker.com/r/openanalytics/shinyproxy-demo)
@@ -25,11 +25,8 @@ The relevant Docker Hub repository can be found at [https://hub.docker.com/r/ope
 To build the image from the Dockerfile, navigate into the root directory of this repository and run
 
 ```bash
-sudo docker build -t openanalytics/shinyproxy-demo:euler .
+sudo docker build -t openanalytics/shinyproxy-shiny-demo .
 ```
-
-**Note**: the `openanalytics/shinyproxy-demo:latest` image does not contain the
-euler package (it contains the `01_hello` and `06_tabsets` Shiny demos).
 
 ## ShinyProxy Configuration
 
@@ -41,7 +38,7 @@ specs:
   - id: euler
     display-name: Euler
     description: Application to calculate euler
-    container-image: openanalytics/shinyproxy-demo:euler
+    container-image: openanalytics/shinyproxy-shiny-demo
 ```
 
 # References
