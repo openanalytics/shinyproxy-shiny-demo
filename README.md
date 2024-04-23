@@ -20,7 +20,7 @@ To pull the image made in this repository from Docker Hub, use
 sudo docker pull openanalytics/shinyproxy-shiny-demo
 ```
 
-The relevant Docker Hub repository can be found at [https://hub.docker.com/r/openanalytics/shinyproxy-demo](https://hub.docker.com/r/openanalytics/shinyproxy-demo)
+The relevant Docker Hub repository can be found at <https://hub.docker.com/r/openanalytics/shinyproxy-shiny-demo>.
 
 To build the image from the Dockerfile, navigate into the root directory of this repository and run
 
