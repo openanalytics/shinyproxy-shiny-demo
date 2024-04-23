@@ -41,7 +41,7 @@ specs:
     container-image: openanalytics/shinyproxy-shiny-demo
 ```
 
-# References
+## References
 
 - [ShinyProxy.io](https://shinyproxy.io/)
 - [All demos](https://shinyproxy.io/documentation/demos/)
