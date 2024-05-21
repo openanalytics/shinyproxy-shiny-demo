@@ -34,11 +34,12 @@ Create a ShinyProxy configuration file (see [application.yml](application.yml)
 for a complete file), containing:
 
 ```yaml
-specs:
-  - id: euler
-    display-name: Euler
-    description: Application to calculate euler
-    container-image: openanalytics/shinyproxy-shiny-demo
+proxy:
+  specs:
+    - id: euler
+      display-name: Euler
+      description: Application to calculate euler
+      container-image: openanalytics/shinyproxy-shiny-demo
 ```
 
 ## References
